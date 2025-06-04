@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: python-hello-world
+    volumes:
+      - .:/app
+    command: python /app/hello_world.py
